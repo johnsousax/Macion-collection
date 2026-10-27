@@ -3,532 +3,78 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Macion Collection</title>
+<meta name="description" content="Perfumes inspirados nos grandes nomes da perfumaria. Nicho, masculinos, femininos e home spray.">
 <meta name="theme-color" content="#0b0906">
-<link rel="icon" type="image/png" href="img/macion_mono.png">
+<link rel="icon" type="image/png" href="/img/macion_mono.png">
 <meta property="og:title" content="Macion Collection">
 <meta property="og:description" content="Perfumes inspirados nos grandes nomes da perfumaria. Nicho, masculinos, femininos e home spray.">
-<meta property="og:image" content="img/hero-nicho-3_0.webp">
-<title>Macion Collection</title>
-<meta name="description" content="Macion Collection: perfumes inspirados nos grandes nomes da perfumaria. Nicho, masculinos, femininos e home spray.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta property="og:image" content="/img/hero-nicho-3_0.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap">
-<style>
-/* Layout: uma vitrine noturna — fundo preto quente, molduras no formato do frasco do logo, ouro só nos detalhes. Identidade única (escura), sem tema claro. */
-:root{
-  --noite:#0b0906;          /* fundo */
-  --veludo:#14110c;         /* superfícies */
-  --ambar:#1d1810;          /* superfície elevada */
-  --ouro:#c9a456;           /* acento */
-  --ouro-claro:#ecd49a;     /* brilho do ouro */
-  --marfim:#efe6d2;         /* texto principal */
-  --fumo:#a3967c;           /* texto secundário */
-  --fio:rgba(201,164,86,.22);
-  --fio-forte:rgba(201,164,86,.5);
-  --display:"Cormorant Garamond","Cormorant",Garamond,"Times New Roman",serif;
-  --texto:"Montserrat","Helvetica Neue",Arial,sans-serif;
-  --gutter:max(16px,env(safe-area-inset-left,0px));
-  --gutter-r:max(16px,env(safe-area-inset-right,0px));
-  --max:1240px;
-  color-scheme:dark;
-}
-*{box-sizing:border-box}
-[hidden]{display:none!important}
-html{scroll-behavior:smooth;background:var(--noite)}
-body{background:var(--noite);color:var(--marfim);font-family:var(--texto);font-size:15px;line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--noite)}
-img{max-width:100%;display:block}
-a{color:inherit}
-button{font:inherit;color:inherit;cursor:pointer}
-:focus-visible{outline:1.5px solid var(--ouro-claro);outline-offset:3px}
-.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
-.ouro{background:linear-gradient(100deg,#9c7a3c 0%,#ecd49a 38%,#c9a456 60%,#f3dfa3 80%,#a9843f 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--ouro);font-weight:500}
-h1,h2,h3{font-family:var(--display);font-weight:500;text-wrap:balance;margin:0;line-height:1.05}
-p{margin:0}
-
-/* ---------- topo ---------- */
-.topo{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(11,9,6,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--fio)}
-.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
-.marca{display:flex;align-items:center;gap:12px;text-decoration:none}
-.marca img{height:38px;width:auto}
-.marca span{font-family:var(--display);font-size:21px;letter-spacing:.24em;font-weight:500}
-.nav{display:flex;gap:30px;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
-.nav a{text-decoration:none;color:var(--fumo);transition:color .2s}
-.nav a:hover{color:var(--ouro-claro)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--ouro);background:transparent;color:var(--ouro-claro);padding:13px 22px;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:background .25s,color .25s;white-space:nowrap}
-.btn:hover{background:var(--ouro);color:var(--noite)}
-.btn.cheio{background:linear-gradient(100deg,#b38d45,#e3c57f 50%,#b38d45);color:#140f07;border-color:transparent}
-.btn.cheio:hover{filter:brightness(1.08)}
-.btn svg{width:16px;height:16px;flex:none}
-.topo .btn{padding:10px 16px}
-
-/* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--fio)}
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 72% 45%,rgba(201,164,86,.13),transparent 70%),radial-gradient(ellipse 40% 50% at 10% 90%,rgba(201,164,86,.06),transparent 70%);pointer-events:none}
-.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center;padding-block:76px 84px;position:relative}
-.hero .pill{display:inline-block;border:1px solid var(--fio-forte);border-radius:99px;padding:6px 16px;font-size:12px;letter-spacing:.16em;color:var(--ouro-claro)}
-.hero h1{font-size:clamp(44px,6.2vw,84px);margin-top:26px;font-weight:500;letter-spacing:-.01em}
-.hero h1 em{font-style:italic;font-weight:400}
-.hero .lead{font-size:17px;color:#d8ccb4;max-width:31em;margin-top:24px}
-.hero .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-.fatos{display:flex;gap:0;margin-top:48px;border-top:1px solid var(--fio);padding-top:22px;max-width:520px}
-.fatos div{flex:1;padding-right:18px}
-.fatos div+div{border-left:1px solid var(--fio);padding-left:20px}
-.fatos b{display:block;font-family:var(--display);font-size:34px;font-weight:500;line-height:1;color:var(--ouro-claro);font-variant-numeric:tabular-nums}
-.fatos b{white-space:nowrap}
-.fatos small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fumo)}
-
-/* vitrine: molduras no formato do frasco do logo */
-.vitrine{position:relative;height:560px}
-.frasco{position:absolute;clip-path:polygon(0 0,100% 0,82% 100%,18% 100%);overflow:hidden;background:var(--ambar)}
-.frasco img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
-.frasco:hover img{transform:scale(1.05)}
-.frasco.f1{width:46%;height:74%;left:27%;top:9%;z-index:3;box-shadow:0 30px 80px rgba(0,0,0,.6)}
-.frasco.f2{width:33%;height:54%;left:0;top:30%;z-index:2;opacity:.85}
-.frasco.f3{width:33%;height:54%;right:0;top:20%;z-index:2;opacity:.85}
-.tampa{position:absolute;z-index:4;left:50%;transform:translateX(-50%);top:0;width:18%;display:flex;flex-direction:column;align-items:center;gap:5px}
-.tampa i{display:block;height:15px;width:100%;background:linear-gradient(100deg,#9c7a3c,#ecd49a 45%,#b38d45);}
-.tampa i+i{width:46%;height:9px}
-.vitrine figcaption{position:absolute;left:27%;width:46%;bottom:0;text-align:center;z-index:5;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--fumo)}
-.vitrine figcaption b{display:block;font-family:var(--display);font-style:italic;font-weight:400;font-size:22px;letter-spacing:0;text-transform:none;color:var(--marfim)}
-
-/* ---------- faixa ---------- */
-.faixa{border-bottom:1px solid var(--fio);overflow:hidden;white-space:nowrap;padding-block:18px;color:var(--fumo)}
-.faixa .trilho{display:inline-flex;gap:46px;animation:rola 60s linear infinite;font-family:var(--display);font-size:22px;font-style:italic}
-.faixa .trilho span::after{content:"✦";font-style:normal;font-size:11px;color:var(--ouro);margin-left:46px;vertical-align:middle}
-@keyframes rola{to{transform:translateX(-50%)}}
-
-/* ---------- sobre ---------- */
-section{scroll-margin-top:84px}
-.sobre .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;padding-block:110px;align-items:start}
-.sobre h2{font-size:clamp(36px,4.4vw,58px);margin-top:18px}
-.sobre h2 em{font-style:italic;font-weight:400}
-.sobre .col p{color:#d4c8af;font-size:16px;max-width:34em}
-.sobre .col p+p{margin-top:16px}
-.tamanhos{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--fio);border:1px solid var(--fio);margin-top:36px}
-.tamanhos div{background:var(--noite);padding:24px 22px}
-.tamanhos b{font-family:var(--display);font-size:46px;font-weight:500;color:var(--ouro-claro);line-height:1}
-.tamanhos b small{font-size:20px;margin-left:4px}
-.tamanhos span{display:block;font-size:12.5px;color:var(--fumo);margin-top:8px}
-
-/* pirâmide olfativa */
-.notas{background:var(--veludo);border-block:1px solid var(--fio)}
-.notas .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:center;padding-block:100px}
-.notas h2{font-size:clamp(34px,4vw,52px);margin-top:18px}
-.notas .intro{color:#d4c8af;margin-top:18px;max-width:32em}
-.piramide{display:flex;flex-direction:column;align-items:center;gap:6px}
-.camada{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;padding:22px 28px;background:linear-gradient(180deg,var(--ambar),#110e09);border:1px solid var(--fio);clip-path:polygon(4% 0,96% 0,100% 100%,0 100%)}
-.camada:nth-child(1){width:62%;clip-path:polygon(9% 0,91% 0,100% 100%,0 100%)}
-.camada:nth-child(2){width:81%;clip-path:polygon(5% 0,95% 0,100% 100%,0 100%)}
-.camada:nth-child(3){width:100%}
-.camada b{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ouro);font-weight:600}
-.camada span{font-size:13.5px;color:#d4c8af;line-height:1.5}
-.camada em{display:block;font-family:var(--display);font-size:20px;color:var(--marfim);font-style:italic;margin-bottom:2px}
-
-/* ---------- coleção ---------- */
-.colecao .wrap{padding-block:110px 90px}
-.cab{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
-.cab h2{font-size:clamp(40px,5vw,66px);margin-top:14px}
-.cab p{color:var(--fumo);max-width:28em}
-.filtros{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:42px;padding-bottom:22px;border-bottom:1px solid var(--fio)}
-.chip{border:1px solid var(--fio);background:transparent;padding:9px 16px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--fumo);transition:all .2s}
-.chip:hover{border-color:var(--fio-forte);color:var(--marfim)}
-.chip[aria-pressed="true"]{border-color:var(--ouro);color:var(--noite);background:var(--ouro)}
-.chip sup{font-size:9px;margin-left:5px;opacity:.75}
-.sub{display:flex;gap:18px;margin-left:6px}
-.sub button{background:none;border:0;padding:4px 0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--fumo);border-bottom:1px solid transparent}
-.sub button[aria-pressed="true"]{color:var(--ouro-claro);border-color:var(--ouro)}
-.busca{margin-left:auto;position:relative;flex:0 1 280px;min-width:0}
-.busca input{width:100%;background:var(--veludo);border:1px solid var(--fio);color:var(--marfim);padding:11px 14px 11px 40px;font:inherit;font-size:14px;outline:none}
-.busca input:focus{border-color:var(--ouro)}
-.busca input::placeholder{color:#7d7360}
-.busca svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--fumo)}
-.contagem{margin-top:18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--fumo)}
-.grade{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:34px 24px;margin-top:26px}
-.item{background:none;border:0;padding:0;text-align:left;display:flex;flex-direction:column;min-width:0}
-.item .foto{position:relative;aspect-ratio:4/5;max-width:100%;overflow:hidden;background:var(--veludo);border:1px solid var(--fio)}
-.item .foto img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .4s}
-.item:hover .foto img{transform:scale(1.045)}
-.item .foto::after{content:"Ver notas";position:absolute;left:0;right:0;bottom:0;padding:12px;text-align:center;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--ouro-claro);background:linear-gradient(transparent,rgba(11,9,6,.92));opacity:0;transform:translateY(6px);transition:all .3s}
-.item:hover .foto::after,.item:focus-visible .foto::after{opacity:1;transform:none}
-.selo{position:absolute;top:10px;left:10px;z-index:2;background:var(--noite);color:var(--ouro-claro);border:1px solid var(--fio-forte);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;padding:4px 9px;font-weight:500}
-.marcado{position:absolute;top:10px;right:10px;z-index:2;width:28px;height:28px;border-radius:50%;background:var(--ouro);color:var(--noite);display:grid;place-items:center}
-.marcado svg{width:14px;height:14px}
-.item .nome{font-family:var(--display);font-size:23px;font-weight:500;line-height:1.1;margin-top:16px;color:var(--marfim)}
-.item .ref{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro);margin-top:6px;font-weight:500}
-.item .tag{font-size:12.5px;color:var(--fumo);margin-top:6px}
-.vazio{padding:60px 0;text-align:center;color:var(--fumo)}
-.vazio b{display:block;font-family:var(--display);font-size:28px;color:var(--marfim);font-weight:500;margin-bottom:6px}
-
-/* ---------- ficha (modal) ---------- */
-dialog.ficha{border:1px solid var(--fio-forte);background:var(--veludo);color:var(--marfim);padding:0;max-width:min(960px,calc(100vw - 32px));width:100%;max-height:calc(100dvh - 32px)}
-dialog.ficha::backdrop{background:rgba(5,4,3,.78);backdrop-filter:blur(4px)}
-.ficha .in{display:grid;grid-template-columns:1fr 1.15fr}
-.ficha .img{background:var(--ambar);min-height:100%}
-.ficha .img img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
-.ficha .tx{padding:44px 42px 38px;display:flex;flex-direction:column;min-width:0}
-.ficha .fechar{position:absolute;top:12px;right:12px;width:40px;height:40px;border:1px solid var(--fio);background:var(--noite);display:grid;place-items:center}
-.ficha .fechar svg{width:16px;height:16px}
-.ficha h3{font-size:44px;margin-top:12px}
-.ficha .insp{color:var(--fumo);margin-top:8px;font-size:14px}
-.ficha .insp b{color:var(--ouro-claro);font-weight:500}
-.ficha dl{margin:28px 0 0;display:grid;gap:0;border-top:1px solid var(--fio)}
-.ficha dl div{display:grid;grid-template-columns:88px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--fio)}
-.ficha dt{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--ouro);font-weight:600;padding-top:3px}
-.ficha dd{margin:0;font-size:14.5px;color:#ddd2bb;line-height:1.55}
-.ficha .vol{display:flex;gap:14px;align-items:center;margin-top:22px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--fumo)}
-.ficha .vol b{font-family:var(--display);font-size:30px;letter-spacing:0;color:var(--ouro-claro);font-weight:500}
-.ficha .acoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:28px}
-
-/* ---------- seleção flutuante ---------- */
-.selecao{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:16px;background:rgba(20,17,12,.96);border:1px solid var(--fio-forte);padding:10px 10px 10px 20px;box-shadow:0 20px 60px rgba(0,0,0,.6);max-width:calc(100vw - 32px)}
-.selecao .q{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--fumo);white-space:nowrap}
-.selecao .q b{font-family:var(--display);font-size:22px;color:var(--ouro-claro);letter-spacing:0;margin-right:6px}
-.selecao .limpar{background:none;border:0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fumo);text-decoration:underline;text-underline-offset:3px}
-
-/* ---------- como pedir ---------- */
-.pedir{background:var(--veludo);border-block:1px solid var(--fio)}
-.pedir .wrap{padding-block:100px}
-.pedir h2{font-size:clamp(36px,4.4vw,56px);margin-top:14px}
-.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--fio);border:1px solid var(--fio);margin-top:48px}
-.passo{background:var(--veludo);padding:34px 30px}
-.passo i{font-family:var(--display);font-style:italic;font-size:54px;line-height:1;color:var(--ouro)}
-.passo h3{font-size:26px;margin-top:18px}
-.passo p{color:#cfc3aa;margin-top:10px;font-size:14.5px}
-
-/* ---------- contato ---------- */
-.contato .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;padding-block:110px;align-items:center}
-.contato .logo{width:min(360px,80%)}
-.contato .frase{font-family:var(--display);font-style:italic;font-size:26px;color:#e6dcc6;margin-top:30px;max-width:16em;line-height:1.3}
-.canais{display:grid;gap:1px;background:var(--fio);border:1px solid var(--fio)}
-.canal{background:var(--noite);display:grid;grid-template-columns:44px 1fr auto;gap:18px;align-items:center;padding:22px 24px;text-decoration:none;transition:background .2s}
-.canal:hover{background:var(--veludo)}
-.canal svg{width:24px;height:24px;color:var(--ouro)}
-.canal small{display:block;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--fumo)}
-.canal b{font-family:var(--display);font-size:24px;font-weight:500;color:var(--marfim);word-break:break-word}
-.canal .seta{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro-claro)}
-.copiar{background:none;border:1px solid var(--fio);padding:7px 12px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro-claro)}
-
-footer{border-top:1px solid var(--fio)}
-footer .wrap{padding-block:30px calc(30px + 70px);display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;font-size:12px;color:#857a65}
-footer p{max-width:62em}
-
-/* ---------- movimento ---------- */
-@media (prefers-reduced-motion:no-preference){
-  .hero .rev{animation:sobe .9s cubic-bezier(.2,.7,.2,1) both}
-  .hero .rev:nth-child(2){animation-delay:.08s}.hero .rev:nth-child(3){animation-delay:.16s}.hero .rev:nth-child(4){animation-delay:.24s}.hero .rev:nth-child(5){animation-delay:.32s}
-  .frasco.f1{animation:ergue 1.3s cubic-bezier(.2,.7,.2,1) .1s both}
-  .frasco.f2{animation:ergue 1.3s cubic-bezier(.2,.7,.2,1) .25s both}
-  .frasco.f3{animation:ergue 1.3s cubic-bezier(.2,.7,.2,1) .35s both}
-  @keyframes sobe{from{transform:translateY(14px);opacity:.25}}
-  @keyframes ergue{from{transform:translateY(22px);opacity:.3}}
-}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-
-/* ---------- responsivo ---------- */
-@media (max-width:1060px){
-  .grade{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .nav{display:none}
-}
-@media (max-width:860px){
-  .hero .wrap,.sobre .wrap,.notas .wrap,.contato .wrap{grid-template-columns:1fr;gap:48px}
-  .hero .wrap{padding-block:48px 56px}
-  .vitrine{height:440px;max-width:520px;width:100%;margin:0 auto}
-  .grade{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}
-  .busca{margin-left:0;flex:1 1 100%}
-  .ficha .in{grid-template-columns:1fr}
-  .ficha .img img{aspect-ratio:16/11}
-  .ficha .tx{padding:28px 22px 26px}
-  .ficha h3{font-size:36px}
-  .passos{grid-template-columns:1fr}
-  .sobre .wrap,.notas .wrap,.colecao .wrap,.pedir .wrap,.contato .wrap{padding-block:72px}
-}
-@media (max-width:520px){
-  .marca span{display:none}
-  .topo .btn span{display:none}
-  .topo .btn{padding:10px}
-  .fatos b{font-size:24px}
-  .fatos div+div{padding-left:14px}
-  .fatos div{padding-right:10px}
-  .vitrine{height:360px}
-  .item .nome{font-size:20px}
-  .camada{padding:18px 18px;grid-template-columns:1fr;gap:6px}
-  .camada:nth-child(1){width:78%}.camada:nth-child(2){width:90%}
-  .selecao{left:16px;right:16px;transform:none;justify-content:space-between}
-  .selecao .limpar{display:none}
-  .canal{grid-template-columns:32px 1fr;padding:18px}
-  .canal .seta{display:none}
-  .canal b{font-size:20px}
-  .ficha dl div{grid-template-columns:1fr;gap:4px}
-}
-</style>
-
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-<header class="topo">
-  <div class="wrap">
-    <a class="marca" href="#inicio" aria-label="Macion Collection, início"><img src="img/macion_mono.png" alt=""><span class="ouro">MACION</span></a>
-    <nav class="nav" aria-label="Principal"><a href="#sobre">A Macion</a><a href="#notas">Notas</a><a href="#colecao">Coleção</a><a href="#pedir">Como pedir</a><a href="#contato">Contato</a></nav>
+<header class="topo"><div class="wrap">
+    <a class="marca" href="/" aria-label="Macion Collection, início"><img src="/img/macion_mono.png" alt=""><span class="ouro">MACION</span></a>
+    <nav class="nav" aria-label="Principal"><a href="/nicho">Nicho</a><a href="/masculino">Masculino</a><a href="/feminino">Feminino</a><a href="/home-spray">Home Spray</a><a href="/#contato">Contato</a></nav>
     <a class="btn cheio" href="https://wa.me/5598999073710?text=Ol%C3%A1%2C%20Macion!%20Vi%20o%20site%20e%20quero%20conhecer%20os%20perfumes." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8.2c.3-.6.6-.6.9-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.2-.1.3 0 .5.4.8 1.5 2 2.6 2.4.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.2.1.4.2.4.4 0 .5-.2 1.2-.7 1.5-.6.4-1.4.6-2.6.2-2.1-.7-4.1-2.8-4.8-4.5-.4-1-.3-1.9.2-2.5z" fill="currentColor"/></svg><span>WhatsApp</span></a>
+  </div></header><main>
+<section class="hero" id="inicio"><div class="wrap">
+  <div>
+    <span class="pill rev">perfumes inspirados</span>
+    <h1 class="rev">Os grandes perfumes do mundo, <em class="ouro">na sua assinatura.</em></h1>
+    <p class="lead rev">Fragrâncias inspiradas nos modelos originais, com composições semelhantes, desenvolvidas para oferecer qualidade e economia.</p>
+    <div class="acoes rev"><a class="btn cheio" href="#destaques">Mais desejados</a><a class="btn" href="https://wa.me/5598999073710" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8.2c.3-.6.6-.6.9-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.2-.1.3 0 .5.4.8 1.5 2 2.6 2.4.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.2.1.4.2.4.4 0 .5-.2 1.2-.7 1.5-.6.4-1.4.6-2.6.2-2.1-.7-4.1-2.8-4.8-4.5-.4-1-.3-1.9.2-2.5z" fill="currentColor"/></svg>Pedir pelo WhatsApp</a></div>
+    <div class="fatos rev"><div><b>124</b><small>fragrâncias</small></div><div><b>55 ml</b><small>perfumes</small></div><div><b>200 ml</b><small>home spray</small></div></div>
   </div>
-</header>
-
-<main>
-<section class="hero" id="inicio">
-  <div class="wrap">
-    <div>
-      <span class="pill rev">perfumes inspirados</span>
-      <h1 class="rev">Os grandes perfumes do mundo, <em class="ouro">na sua assinatura.</em></h1>
-      <p class="lead rev">A Macion Collection cria fragrâncias inspiradas nos modelos originais, com composições semelhantes, desenvolvidas para oferecer qualidade e economia.</p>
-      <div class="acoes rev">
-        <a class="btn cheio" href="#colecao">Ver a coleção</a>
-        <a class="btn" href="https://wa.me/5598999073710" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8.2c.3-.6.6-.6.9-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.2-.1.3 0 .5.4.8 1.5 2 2.6 2.4.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.2.1.4.2.4.4 0 .5-.2 1.2-.7 1.5-.6.4-1.4.6-2.6.2-2.1-.7-4.1-2.8-4.8-4.5-.4-1-.3-1.9.2-2.5z" fill="currentColor"/></svg>Pedir pelo WhatsApp</a>
-      </div>
-      <div class="fatos rev">
-        <div><b>124</b><small>fragrâncias</small></div>
-        <div><b>55 ml</b><small>perfumes</small></div>
-        <div><b>200 ml</b><small>home spray</small></div>
-      </div>
-    </div>
-    <figure class="vitrine" aria-label="Destaques da linha nicho">
-      <div class="frasco f2"><img src="img/hero-nicho-4_2.webp" alt="Frasco inspirado em Baccarat Rouge 540"></div>
-      <div class="frasco f3"><img src="img/hero-nicho-6_0.webp" alt="Frasco inspirado em Erba Pura"></div>
-      <div class="tampa" style="top:calc(9% - 34px)"><i></i><i></i></div>
-      <div class="frasco f1"><img src="img/hero-nicho-3_0.webp" alt="Frasco inspirado em Layton"></div>
-      <figcaption><b>Layton</b>lançamento nicho</figcaption>
-    </figure>
-  </div>
-</section>
-
-<div class="faixa" aria-hidden="true"><div class="trilho"><span>Baccarat Rouge 540</span><span>Layton</span><span>Tobacco Vanille</span><span>Aventus</span><span>Sauvage</span><span>La Vie Est Belle</span><span>Bleu de Chanel</span><span>Good Girl</span><span>Erba Pura</span><span>Coco Mademoiselle</span><span>Black Opium</span><span>Oud Wood</span><span>Baccarat Rouge 540</span><span>Layton</span><span>Tobacco Vanille</span><span>Aventus</span><span>Sauvage</span><span>La Vie Est Belle</span><span>Bleu de Chanel</span><span>Good Girl</span><span>Erba Pura</span><span>Coco Mademoiselle</span><span>Black Opium</span><span>Oud Wood</span></div></div>
-
-<section class="sobre" id="sobre">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow">A Macion</span>
-      <h2>Perfumaria de inspiração, com <em class="ouro">qualidade inigualável.</em></h2>
-    </div>
-    <div class="col">
-      <p>Cada fragrância da Macion parte de um perfume que você já conhece e admira. Reproduzimos a composição com notas semelhantes às do original para entregar a mesma experiência olfativa por um preço que cabe no dia a dia.</p>
-      <p>Na linha <b style="color:var(--ouro-claro);font-weight:500">Nicho</b>, as inspirações vêm de casas que se dedicam exclusivamente à criação de perfumes. São fragrâncias conhecidas pelo preço elevado, por ingredientes raros e fórmulas exclusivas, pensadas para quem valoriza originalidade e prestígio.</p>
-      <div class="tamanhos">
-        <div><b>55<small>ml</small></b><span>Todos os perfumes: nicho, masculinos e femininos.</span></div>
-        <div><b>200<small>ml</small></b><span>Home spray, perfume para ambientes.</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="notas" id="notas">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow">Como ler uma fragrância</span>
-      <h2>A pirâmide olfativa</h2>
-      <p class="intro">Todo perfume se revela em três tempos. Em cada fragrância da coleção você encontra as notas de saída, de corpo e de fundo, para escolher pelo que mais combina com você.</p>
-    </div>
-    <div class="piramide" role="list">
-      <div class="camada" role="listitem"><b>Saída</b><span><em>Os primeiros minutos</em>A primeira impressão, percebida logo após aplicar.</span></div>
-      <div class="camada" role="listitem"><b>Corpo</b><span><em>O coração</em>Surge depois de alguns minutos e define o caráter do perfume.</span></div>
-      <div class="camada" role="listitem"><b>Fundo</b><span><em>A base</em>Fixa a fragrância e permanece por mais tempo na pele.</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="colecao" id="colecao">
-  <div class="wrap">
-    <div class="cab">
-      <div><span class="eyebrow">Coleção completa</span><h2>Inspirações</h2></div>
-      <p>Toque em uma fragrância para ver as notas e adicioná-la à sua seleção. Depois, envie tudo de uma vez pelo WhatsApp.</p>
-    </div>
-    <div class="filtros" role="toolbar" aria-label="Filtrar coleção">
-      <button class="chip" data-cat="todos" aria-pressed="true">Todos<sup></sup></button>
-      <button class="chip" data-cat="nicho" aria-pressed="false">Nicho<sup></sup></button>
-      <button class="chip" data-cat="masc" aria-pressed="false">Masculinos<sup></sup></button>
-      <button class="chip" data-cat="fem" aria-pressed="false">Femininos<sup></sup></button>
-      <button class="chip" data-cat="arabe" aria-pressed="false">Árabes<sup></sup></button>
-      <button class="chip" data-cat="home" aria-pressed="false">Home Spray<sup></sup></button>
-      <div class="sub" id="subNicho" hidden>
-        <button data-sub="" aria-pressed="true">Todos</button><button data-sub="Masculino" aria-pressed="false">Masc.</button><button data-sub="Feminino" aria-pressed="false">Fem.</button><button data-sub="Unissex" aria-pressed="false">Unissex</button>
-      </div>
-      <label class="busca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="busca" type="search" placeholder="Buscar por nome, marca ou nota" aria-label="Buscar fragrância"></label>
-    </div>
-    <div class="contagem" id="contagem" aria-live="polite"></div>
-    <div class="grade" id="grade"></div>
-  </div>
-</section>
-
-<section class="pedir" id="pedir">
-  <div class="wrap">
-    <span class="eyebrow">Como pedir</span>
-    <h2>Do catálogo para as suas mãos</h2>
-    <div class="passos">
-      <div class="passo"><i>1</i><h3>Escolha</h3><p>Navegue pela coleção e adicione à sua seleção as fragrâncias que quiser.</p></div>
-      <div class="passo"><i>2</i><h3>Envie pelo WhatsApp</h3><p>Com um toque, sua lista vai pronta para o nosso WhatsApp, (98) 99907-3710.</p></div>
-      <div class="passo"><i>3</i><h3>Receba</h3><p>Combinamos com você a forma de pagamento e a entrega.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="contato" id="contato">
-  <div class="wrap">
-    <div>
-      <img class="logo" src="img/macion_full.png" alt="Macion Parfum">
-      <p class="frase">Perfumes inspirados, qualidade inigualável.</p>
-    </div>
+  <figure class="vitrine" aria-label="Destaques da linha nicho">
+    <div class="frasco f2"><img src="/img/hero-nicho-4_2.webp" alt="Frasco inspirado em Baccarat Rouge 540"></div>
+    <div class="frasco f3"><img src="/img/hero-nicho-6_0.webp" alt="Frasco inspirado em Erba Pura"></div>
+    <div class="tampa" style="top:calc(9% - 34px)"><i></i><i></i></div>
+    <div class="frasco f1"><img src="/img/hero-nicho-3_0.webp" alt="Frasco inspirado em Layton"></div>
+    <figcaption><b>Layton</b>lançamento nicho</figcaption>
+  </figure>
+</div></section>
+<div class="faixa" aria-hidden="true"><div class="trilho"><span>Baccarat Rouge 540</span><span>Layton</span><span>Tobacco Vanille</span><span>Aventus</span><span>Sauvage</span><span>La Vie Est Belle</span><span>Bleu de Chanel</span><span>Good Girl</span><span>Erba Pura</span><span>Coco Mademoiselle</span><span>Baccarat Rouge 540</span><span>Layton</span><span>Tobacco Vanille</span><span>Aventus</span><span>Sauvage</span><span>La Vie Est Belle</span><span>Bleu de Chanel</span><span>Good Girl</span><span>Erba Pura</span><span>Coco Mademoiselle</span></div></div>
+<section class="secao" id="destaques"><div class="wrap">
+  <div class="secao-cab"><div><span class="eyebrow">Seleção da casa</span><h2>Os mais <em class="ouro">desejados</em></h2></div><p>As inspirações mais pedidas da Macion. Toque para ver as notas e adicionar à sua seleção.</p></div>
+  <div class="grade" id="grade"></div>
+</div></section>
+<section class="secao" id="colecoes" style="border-top:1px solid var(--fio)"><div class="wrap">
+  <div class="secao-cab"><div><span class="eyebrow">Coleções</span><h2>Escolha a sua linha</h2></div><p>Cada linha tem a sua página, com todas as fragrâncias e as notas de saída, corpo e fundo.</p></div>
+  <div class="setores"><a class="setor" href="/nicho"><img src="/img/hero-nicho-2_0.webp" alt="" loading="lazy"><div class="tx"><small>20 fragrâncias</small><b>Nicho</b><span>Ver coleção →</span></div></a><a class="setor" href="/masculino"><img src="/img/masculino-4_2.webp" alt="" loading="lazy"><div class="tx"><small>45 fragrâncias</small><b>Masculino</b><span>Ver coleção →</span></div></a><a class="setor" href="/feminino"><img src="/img/feminino-09_0.webp" alt="" loading="lazy"><div class="tx"><small>48 fragrâncias</small><b>Feminino</b><span>Ver coleção →</span></div></a><a class="setor" href="/home-spray"><img src="/img/home-3_0.webp" alt="" loading="lazy"><div class="tx"><small>11 aromas</small><b>Home Spray</b><span>Ver coleção →</span></div></a></div>
+</div></section>
+<section class="faixa-pedir"><div class="wrap">
+  <div><h2>Escolheu? Peça pelo WhatsApp.</h2><p>Monte a sua seleção no site e envie a lista pronta para (98) 99907-3710. Combinamos pagamento e entrega com você.</p></div>
+  <a class="btn cheio" href="https://wa.me/5598999073710" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8.2c.3-.6.6-.6.9-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.2-.1.3 0 .5.4.8 1.5 2 2.6 2.4.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.2.1.4.2.4.4 0 .5-.2 1.2-.7 1.5-.6.4-1.4.6-2.6.2-2.1-.7-4.1-2.8-4.8-4.5-.4-1-.3-1.9.2-2.5z" fill="currentColor"/></svg>Falar com a Macion</a>
+</div></section>
+<section class="contato" id="contato"><div class="wrap">
+    <div><img class="logo" src="/img/macion_full.png" alt="Macion Parfum"><p class="frase">Perfumes inspirados, qualidade inigualável.</p></div>
     <div class="canais">
       <div class="canal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8.2c.3-.6.6-.6.9-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.2-.1.3 0 .5.4.8 1.5 2 2.6 2.4.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.2.1.4.2.4.4 0 .5-.2 1.2-.7 1.5-.6.4-1.4.6-2.6.2-2.1-.7-4.1-2.8-4.8-4.5-.4-1-.3-1.9.2-2.5z" fill="currentColor"/></svg><div><small>WhatsApp</small><b id="numero">(98) 99907-3710</b></div><button class="copiar" id="copiar" type="button">Copiar</button></div>
       <a class="canal" href="https://instagram.com/macioncollection" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg><div><small>Instagram</small><b>@macioncollection</b></div><span class="seta">Seguir</span></a>
       <a class="canal" href="https://macioncollection.com.br" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18" fill="none" stroke="currentColor" stroke-width="1.4"/></svg><div><small>Site</small><b>macioncollection.com.br</b></div><span class="seta">Visitar</span></a>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer><div class="wrap">
+    </div></div></section>
+</main><footer><div class="wrap">
   <span>© Macion Collection · Macion Parfum</span>
   <p>As marcas e os nomes de perfumes citados pertencem aos seus respectivos proprietários e são usados apenas como referência olfativa. Os produtos Macion não são fabricados nem comercializados por essas marcas.</p>
 </div></footer>
-
 <div class="selecao" id="selecao" hidden>
   <span class="q"><b id="qtd">0</b>na seleção</span>
   <button class="limpar" id="limpar" type="button">Limpar</button>
   <a class="btn cheio" id="enviar" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8.2c.3-.6.6-.6.9-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.2-.1.3 0 .5.4.8 1.5 2 2.6 2.4.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.2.1.4.2.4.4 0 .5-.2 1.2-.7 1.5-.6.4-1.4.6-2.6.2-2.1-.7-4.1-2.8-4.8-4.5-.4-1-.3-1.9.2-2.5z" fill="currentColor"/></svg>Enviar pedido</a>
 </div>
-
 <dialog class="ficha" id="ficha" aria-labelledby="fNome">
   <button class="fechar" id="fechar" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-  <div class="in">
-    <div class="img"><img id="fImg" alt=""></div>
-    <div class="tx">
-      <span class="eyebrow" id="fCat"></span>
-      <h3 id="fNome"></h3>
-      <p class="insp" id="fInsp"></p>
-      <dl id="fNotas"></dl>
+  <div class="in"><div class="img"><img id="fImg" alt=""></div>
+    <div class="tx"><span class="eyebrow" id="fCat"></span><h3 id="fNome"></h3><p class="insp" id="fInsp"></p><dl id="fNotas"></dl>
       <div class="vol"><b id="fVol"></b><span id="fVolTx"></span></div>
-      <div class="acoes">
-        <button class="btn cheio" id="fAdd" type="button"></button>
-        <a class="btn" id="fWa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8.2c.3-.6.6-.6.9-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.2-.1.3 0 .5.4.8 1.5 2 2.6 2.4.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.2.1.4.2.4.4 0 .5-.2 1.2-.7 1.5-.6.4-1.4.6-2.6.2-2.1-.7-4.1-2.8-4.8-4.5-.4-1-.3-1.9.2-2.5z" fill="currentColor"/></svg>Pedir só este</a>
-      </div>
-    </div>
-  </div>
+      <div class="acoes"><button class="btn cheio" id="fAdd" type="button"></button><a class="btn" id="fWa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8.2c.3-.6.6-.6.9-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.2-.1.3 0 .5.4.8 1.5 2 2.6 2.4.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.2.1.4.2.4.4 0 .5-.2 1.2-.7 1.5-.6.4-1.4.6-2.6.2-2.1-.7-4.1-2.8-4.8-4.5-.4-1-.3-1.9.2-2.5z" fill="currentColor"/></svg>Pedir só este</a></div>
+    </div></div>
 </dialog>
-
-<script>
-const DADOS = [{"id":"nicho-2_0","n":"Tobacco Vanille","b":"Tom Ford","c":"nicho","s":"Masculino","t":"Tabaco, folhas de tabaco, flor de tabaco e limão.","m":"Cacau, fava tonka e acorde especiado.","f":"Acorde amadeirado e baunilha.","x":""},{"id":"nicho-2_1","n":"Aventus","b":"Creed","c":"nicho","s":"Masculino","t":"Laranja e tangerina.","m":"Rosa, jasmim, maçã e abacaxi.","f":"Patchouli, musgo e ambergris (âmbar cinza).","x":""},{"id":"nicho-2_2","n":"Oud Wood","b":"Tom Ford","c":"nicho","s":"Masculino","t":"Cardamomo, pimenta Sichuan e pau-rosa.","m":"Madeira de sândalo e vetiver.","f":"Âmbar, oud e tonka.","x":""},{"id":"nicho-2_3","n":"Pegasus Exclusif","b":"Parfums de Marly","c":"nicho","s":"Masculino","t":"Cardamomo, heliotropina, pimenta e bergamota.","m":"Amêndoa, lavanda, jasmim e gerânio.","f":"Madeira de guaiaco, baunilha, oud e sândalo.","x":""},{"id":"nicho-2_4","n":"Hacivat","b":"Nishane","c":"nicho","s":"Masculino","t":"Bergamota, abacaxi e toranja.","m":"Jasmim, patchouli e cedro.","f":"Clearwood, carvalho e madeira seca.","x":""},{"id":"nicho-2_5","n":"Reflection 45 Man","b":"Amouage","c":"nicho","s":"Masculino","t":"Lavanda, zimbro, pimenta rosa, sálvia esclareia e cardamomo.","m":"Íris, jasmim, néroli, fava tonka, benjoim e raiz de angélica.","f":"Olíbano, sândalo, mirra, opoponax, cedro, vetiver, patchouli e baunilha.","x":""},{"id":"nicho-3_0","n":"Layton","b":"Parfums de Marly","c":"nicho","s":"Masculino","t":"Maçã, lavanda, bergamota e mandarina.","m":"Gerânio, violeta e jasmim.","f":"Baunilha, cardamomo, sândalo, pimenta, madeira de guaiaco, patchouli, Ambermax™ e cumarina.","x":"Lançamento"},{"id":"nicho-4_0","n":"Delina Exclusif","b":"Parfums de Marly","c":"nicho","s":"Feminino","t":"Cardamomo, heliotropina, pimenta e bergamota.","m":"Amêndoa, lavanda, jasmim e gerânio.","f":"Madeira de guaiaco, baunilha, oud e sândalo.","x":""},{"id":"nicho-4_1","n":"Royal Amber","b":"Orientica","c":"nicho","s":"Feminino","t":"Coentro, pimenta rosa e bergamota.","m":"Jasmim, rosa damascena e violeta.","f":"Âmbar, sândalo, baunilha e vetiver.","x":""},{"id":"nicho-4_2","n":"Baccarat Rouge 540","b":"Maison Francis Kurkdjian","c":"nicho","s":"Feminino","t":"Açafrão e jasmim.","m":"Madeira de âmbar e âmbar cinzento.","f":"Resina de abeto, açúcar queimado e cedro.","x":""},{"id":"nicho-4_3","n":"Palatine","b":"Parfums de Marly","c":"nicho","s":"Feminino","t":"Pera, bergamota e mandarina.","m":"Violeta e lavanda.","f":"Almíscar, sândalo, baunilha e patchouli.","x":""},{"id":"nicho-4_4","n":"Black Orchid","b":"Tom Ford","c":"nicho","s":"Feminino","t":"Groselha, mandarina e limão.","m":"Trufa, gardênia, orquídea, ylang ylang e flor de lótus.","f":"Chocolate, patchouli, sândalo, vetiver, baunilha e âmbar.","x":""},{"id":"nicho-4_5","n":"Valaya","b":"Parfums de Marly","c":"nicho","s":"Feminino","t":"Aldeídos, pêssego, bergamota e mandarina.","m":"Flor de laranjeira, lírio-do-vale e uva.","f":"Almíscar, âmbar gris, vetiver e baunilha.","x":""},{"id":"nicho-5_0","n":"Aventus for Her","b":"Creed","c":"nicho","s":"Feminino","t":"Maçã verde, bergamota, limão, pimenta rosa, violeta e patchouli.","m":"Almíscar, rosa, sândalo e estoraque.","f":"Groselha preta, pêssego, âmbar, lilás e ylang ylang.","x":"Lançamento"},{"id":"nicho-6_0","n":"Erba Pura","b":"Xerjoff","c":"nicho","s":"Unissex","t":"Laranja siciliana, bergamota da Calábria e limão siciliano.","m":"Frutas.","f":"Almíscar branco, baunilha de Madagascar e âmbar.","x":""},{"id":"nicho-6_1","n":"Neroli Portofino","b":"Tom Ford","c":"nicho","s":"Unissex","t":"Bergamota, mandarina, limão e laranja.","m":"Lavanda, flor de laranjeira, néroli, jasmim e hibisco.","f":"Raiz de angélica e âmbar.","x":""},{"id":"nicho-6_2","n":"Vibrato","b":"Sospiro","c":"nicho","s":"Unissex","t":"Toranja e bergamota.","m":"Gengibre, magnólia, lírio e aldeídos.","f":"Cedro, patchouli, âmbar e almíscar.","x":""},{"id":"nicho-6_3","n":"Torino21","b":"Xerjoff","c":"nicho","s":"Unissex","t":"Hortelã, limão, manjericão e tomilho.","m":"Groselha preta, lavanda, alecrim e jasmim.","f":"Almíscar e verbena.","x":""},{"id":"nicho-6_4","n":"God of Fire","b":"Stéphane Humbert Lucas 777","c":"nicho","s":"Unissex","t":"Manga, limão, gengibre e bagas vermelhas.","m":"Cumarina, jasmim e cedro.","f":"Almíscar, oud, âmbar e nagarmota.","x":""},{"id":"nicho-6_5","n":"Hundred Silent Ways","b":"Nishane","c":"nicho","s":"Unissex","t":"Tuberosa, pêssego e tangerina.","m":"Gardênia, orquídea e jasmim.","f":"Baunilha, sândalo e vetiver.","x":""},{"id":"masculino-2_0","n":"Fierce","b":"Abercrombie & Fitch","c":"masc","s":null,"t":"Laranja, limão, petitgrain e cardamomo.","m":"Notas marinhas, alecrim, jasmim e rosa.","f":"Sálvia, cedro, musgo de carvalho e almíscar.","x":""},{"id":"masculino-2_1","n":"Animale for Men","b":"Animale","c":"masc","s":null,"t":"Frésia, limão siciliano e néroli.","m":"Bagas de zimbro, lavanda, gerânio, notas de rosa e ozônio.","f":"Couro, musgo de carvalho e vetiver.","x":""},{"id":"masculino-2_2","n":"Azzaro Pour Homme","b":"Azzaro","c":"masc","s":null,"t":"Gerânio, lavanda, sálvia, manjericão e limão.","m":"Cardamomo, íris e anis estrelado.","f":"Âmbar, musgo, acorde amadeirado e fava tonka.","x":""},{"id":"masculino-2_3","n":"The Most Wanted","b":"Azzaro","c":"masc","s":null,"t":"Cardamomo.","m":"Toffee (caramelo).","f":"Madeira de âmbar.","x":""},{"id":"masculino-2_4","n":"Bvlgari Aqva","b":"Bvlgari","c":"masc","s":null,"t":"Laranja, tangerina e petitgrain.","m":"Algas marinhas, lavanda e sálvia.","f":"Cedro da Virgínia, patchouli e âmbar.","x":""},{"id":"masculino-2_5","n":"212 VIP Men","b":"Carolina Herrera","c":"masc","s":null,"t":"Limão, pimenta, gengibre e maracujá.","m":"Vodca, gin, hortelã e baunilha.","f":"Âmbar, couro e sândalo.","x":""},{"id":"masculino-3_0","n":"212 Men","b":"Carolina Herrera","c":"masc","s":null,"t":"Bergamota, notas verdes, lavanda e toranja.","m":"Gardênia, gengibre, pimenta e sálvia.","f":"Sândalo, almíscar e notas amadeiradas.","x":""},{"id":"masculino-3_1","n":"212 Sexy Men","b":"Carolina Herrera","c":"masc","s":null,"t":"Tangerina, bergamota e limão.","m":"Pimenta, cardamomo e gálbano.","f":"Baunilha, sândalo e madeira de guaiaco.","x":""},{"id":"masculino-3_2","n":"212 VIP Black","b":"Carolina Herrera","c":"masc","s":null,"t":"Absinto, anis e erva-doce.","m":"Lavanda.","f":"Almíscar e casca de baunilha negra.","x":""},{"id":"masculino-3_3","n":"Bad Boy","b":"Carolina Herrera","c":"masc","s":null,"t":"Bergamota, pimenta e laranja.","m":"Sálvia, baunilha e cedro.","f":"Fava tonka, âmbar e cacau.","x":""},{"id":"masculino-3_4","n":"CH Men Privé","b":"Carolina Herrera","c":"masc","s":null,"t":"Toranja e whiskey.","m":"Lavanda, sálvia, tomilho e cardamomo.","f":"Couro, benjoim, fava tonka e acorde amadeirado.","x":""},{"id":"masculino-3_5","n":"Allure Homme Sport","b":"Chanel","c":"masc","s":null,"t":"Laranja, notas oceânicas, aldeídos e mandarina sanguínea.","m":"Pimenta, néroli e cedro.","f":"Fava tonka, baunilha, almíscar branco, âmbar, vetiver e resina de elemi.","x":""},{"id":"masculino-4_0","n":"Bleu de Chanel","b":"Chanel","c":"masc","s":null,"t":"Toranja, limão, hortelã e pimenta rosa.","m":"Gengibre, noz-moscada, jasmim e Iso E Super.","f":"Incenso, cedro, vetiver, sândalo, patchouli, ládano e almíscar branco.","x":""},{"id":"masculino-4_1","n":"Stronger With You","b":"Emporio Armani","c":"masc","s":null,"t":"Castanha e açúcar.","m":"Sálvia e lavanda.","f":"Baunilha e fumaça.","x":""},{"id":"masculino-4_2","n":"Fahrenheit","b":"Dior","c":"masc","s":null,"t":"Bergamota, mandarina e limão.","m":"Cravo, noz-moscada, violeta e jasmim.","f":"Couro, fava tonka e notas amadeiradas.","x":""},{"id":"masculino-4_3","n":"Sauvage","b":"Dior","c":"masc","s":null,"t":"Bergamota e lavanda.","m":"Pimenta, pimenta rosa e gerânio.","f":"Patchouli, cedro e ambroxan.","x":""},{"id":"masculino-4_4","n":"King","b":"Dolce&Gabbana","c":"masc","s":null,"t":"Lima, laranja e limão taiti.","m":"Lavanda, gerânio, zimbro e sálvia.","f":"Vetiver, patchouli e cedro.","x":""},{"id":"masculino-4_5","n":"The One","b":"Dolce&Gabbana","c":"masc","s":null,"t":"Toranja, coentro e manjericão.","m":"Gengibre, cardamomo e flor de laranjeira.","f":"Âmbar, tabaco e cedro.","x":""},{"id":"masculino-5_0","n":"Ferrari Black","b":"Ferrari","c":"masc","s":null,"t":"Laranja, notas oceânicas, aldeídos e mandarina sanguínea.","m":"Pimenta, néroli e cedro.","f":"Fava tonka, baunilha, almíscar branco, âmbar, vetiver e resina de elemi.","x":""},{"id":"masculino-5_1","n":"Acqua di Giò","b":"Giorgio Armani","c":"masc","s":null,"t":"Toranja, limão, hortelã e pimenta rosa.","m":"Gengibre, noz-moscada, jasmim e Iso E Super.","f":"Incenso, cedro, vetiver, sândalo, patchouli, ládano e almíscar branco.","x":""},{"id":"masculino-5_2","n":"Armani Code","b":"Giorgio Armani","c":"masc","s":null,"t":"Bergamota e limão.","m":"Anis estrelado e folhas de oliveira.","f":"Madeira de guaiaco, couro e fava tonka.","x":""},{"id":"masculino-5_3","n":"Boss Bottled","b":"Hugo Boss","c":"masc","s":null,"t":"Ameixa, bergamota, limão e maçã.","m":"Canela, cravo e sálvia.","f":"Baunilha, sândalo e vetiver.","x":""},{"id":"masculino-5_4","n":"L'Eau d'Issey","b":"Issey Miyake","c":"masc","s":null,"t":"Coentro, tangerina, bergamota e limão.","m":"Sálvia, acorde marinho, noz-moscada e gerânio.","f":"Vetiver, sândalo, cedro, tabaco e âmbar.","x":""},{"id":"masculino-5_5","n":"Silver Scent","b":"Jacques Bogart","c":"masc","s":null,"t":"Laranja e limão.","m":"Lavanda, flor de laranjeira, noz-moscada, cardamomo, coentro, gerânio e alecrim.","f":"Lichia, fava tonka, vetiver e acorde amadeirado.","x":""},{"id":"masculino-6_0","n":"Scandal Pour Homme","b":"Jean Paul Gaultier","c":"masc","s":null,"t":"Mandarina.","m":"Sálvia e caramelo.","f":"Fava tonka e acorde amadeirado.","x":""},{"id":"masculino-6_1","n":"Ultra Male","b":"Jean Paul Gaultier","c":"masc","s":null,"t":"Bergamota, limão e menta.","m":"Lavanda, canela, sálvia e cominho.","f":"Baunilha, âmbar, patchouli e cedro.","x":""},{"id":"masculino-6_2","n":"Le Male","b":"Jean Paul Gaultier","c":"masc","s":null,"t":"Lavanda, hortelã, cardamomo e bergamota.","m":"Artemísia, canela e alcaravia.","f":"Fava tonka, baunilha, sândalo e cedro.","x":""},{"id":"masculino-6_3","n":"Lacoste Blanc","b":"Lacoste","c":"masc","s":null,"t":"Laranja e alecrim.","m":"Ylang ylang e tuberosa.","f":"Cedro e vetiver.","x":""},{"id":"masculino-6_4","n":"Imagination","b":"Louis Vuitton","c":"masc","s":null,"t":"Cítricos, laranja e bergamota.","m":"Néroli, gengibre, canela e chá preto.","f":"Ambrox, guaiaco e olíbano.","x":""},{"id":"masculino-6_5","n":"Legend","b":"Montblanc","c":"masc","s":null,"t":"Lavanda, bergamota e abacaxi.","m":"Maçã, musgo, gerânio e rosa.","f":"Sândalo.","x":""},{"id":"masculino-7_0","n":"Toy Boy","b":"Moschino","c":"masc","s":null,"t":"Bergamota, laranja e pera.","m":"Noz-moscada, pimenta, rosa e magnólia.","f":"Cashmeran, vetiver, sândalo, almíscar e âmbar.","x":""},{"id":"masculino-7_1","n":"One Million","b":"Paco Rabanne","c":"masc","s":null,"t":"Menta, tangerina e toranja.","m":"Canela, rosa e pimenta.","f":"Âmbar, couro, patchouli e cedro.","x":""},{"id":"masculino-7_2","n":"Black XS","b":"Paco Rabanne","c":"masc","s":null,"t":"Cravo, sálvia e limão.","m":"Canela, cardamomo, açúcar mascavo e tolu.","f":"Âmbar, pau-brasil, patchouli e sândalo.","x":""},{"id":"masculino-7_3","n":"Invictus","b":"Paco Rabanne","c":"masc","s":null,"t":"Toranja, tangerina e acorde marinho.","m":"Folhas de louro e jasmim.","f":"Âmbar, patchouli e musgo de carvalho.","x":""},{"id":"masculino-7_4","n":"Phantom","b":"Paco Rabanne","c":"masc","s":null,"t":"Limão.","m":"Lavanda, maçã e notas esfumaçadas.","f":"Patchouli, baunilha e vetiver.","x":""},{"id":"masculino-7_5","n":"Pure XS","b":"Paco Rabanne","c":"masc","s":null,"t":"Gengibre, bergamota e toranja.","m":"Couro, canela, maçã, licor e tomilho.","f":"Cedro, cashmere, patchouli, açúcar e mirra.","x":""},{"id":"masculino-8_0","n":"Polo Blue","b":"Ralph Lauren","c":"masc","s":null,"t":"Tangerina, pepino e acorde marinho.","m":"Manjericão, sálvia e gerânio.","f":"Notas amadeiradas e almíscar.","x":""},{"id":"masculino-8_1","n":"Polo Black","b":"Ralph Lauren","c":"masc","s":null,"t":"Manga gelada e sálvia.","m":"Artemísia prateada e acorde verde.","f":"Patchouli preto, fava tonka e madeira de sândalo.","x":""},{"id":"masculino-8_2","n":"Polo Green","b":"Ralph Lauren","c":"masc","s":null,"t":"Laranja e bergamota.","m":"Artemísia, manjericão, pimenta, jasmim, rosa, gerânio, cravo e camomila.","f":"Couro, patchouli, vetiver, musgo de carvalho, âmbar e almíscar.","x":""},{"id":"masculino-8_3","n":"Versace Eros","b":"Versace","c":"masc","s":null,"t":"Maçã, menta e limão.","m":"Gerânio, baunilha e musgo.","f":"Fava tonka e acorde amadeirado.","x":""},{"id":"masculino-8_4","n":"MYSLF","b":"YSL","c":"masc","s":null,"t":"Bergamota da Calábria e bergamota.","m":"Flor de laranjeira tunisiana.","f":"Ambrofix™ e patchouli.","x":""},{"id":"masculino-8_5","n":"Spicebomb","b":"Viktor & Rolf","c":"masc","s":null,"t":"Bergamota e grapefruit.","m":"Pimenta, elemi, canela e páprica.","f":"Tabaco, couro e vetiver.","x":""},{"id":"masculino-9_0","n":"Terre d'Hermès","b":"Hermès","c":"masc","s":null,"t":"Laranja e grapefruit.","m":"Pimenta, sálvia e estoraque.","f":"Vetiver, cedro, patchouli e benjoim siam.","x":""},{"id":"masculino-9_1","n":"Asad","b":"Lattafa","c":"masc","s":null,"t":"Pimenta, abacaxi e elemi.","m":"Café e tabaco.","f":"Âmbar, cedro, ládano e baunilha.","x":"Árabe"},{"id":"masculino-9_2","n":"Bade'e Al Oud – Oud for Glory","b":"Lattafa","c":"masc","s":null,"t":"Bergamota e grapefruit.","m":"Pimenta, elemi, canela e páprica.","f":"Tabaco, couro e vetiver.","x":"Árabe"},{"id":"feminino-02_0","n":"Goddess","b":"Burberry","c":"fem","s":null,"t":"Lavanda e gengibre.","m":"Cacau e baunilha.","f":"Almíscar.","x":""},{"id":"feminino-02_1","n":"Her","b":"Burberry","c":"fem","s":null,"t":"Framboesa, morango, cereja amarga, amora, cassis e limão siciliano.","m":"Jasmim e violeta.","f":"Âmbar, musgo de carvalho, almíscar, patchouli, baunilha e cashmeran.","x":""},{"id":"feminino-02_2","n":"Fantasy","b":"Britney Spears","c":"fem","s":null,"t":"Kiwi, lichia e marmelo.","m":"Jasmim, chocolate branco e caramelo.","f":"Almíscar, lírio e sândalo.","x":""},{"id":"feminino-02_3","n":"212 VIP","b":"Carolina Herrera","c":"fem","s":null,"t":"Bergamota, laranja, maracujá e rum.","m":"Gardênia, fava tonka e almíscar.","f":"Baunilha, benjoim, patchouli, vetiver e sândalo.","x":""},{"id":"feminino-02_4","n":"212 VIP Rosé","b":"Carolina Herrera","c":"fem","s":null,"t":"Acorde frutal e champanhe.","m":"Flor de pêssego.","f":"Almíscar, âmbar e acorde amadeirado.","x":""},{"id":"feminino-02_5","n":"212 Sexy","b":"Carolina Herrera","c":"fem","s":null,"t":"Pimenta rosa, tangerina e bergamota.","m":"Gardênia, pelargônio, algodão-doce, flores e rosa.","f":"Almíscar, baunilha, sândalo, patchouli, caramelo e violeta.","x":""},{"id":"feminino-03_0","n":"CH","b":"Carolina Herrera","c":"fem","s":null,"t":"Limão, bergamota e acorde aquático.","m":"Canela, praliné, jasmim, rosa e flor de laranjeira.","f":"Acorde amadeirado, âmbar e almíscar.","x":""},{"id":"feminino-03_1","n":"CH Privée","b":"Carolina Herrera","c":"fem","s":null,"t":"Osmanthus.","m":"Caviar e couro.","f":"Baunilha e patchouli.","x":""},{"id":"feminino-03_2","n":"Good Girl","b":"Carolina Herrera","c":"fem","s":null,"t":"Bergamota, amêndoa e café.","m":"Jasmim, tuberosa e rosa.","f":"Fava tonka, cacau, baunilha e açúcar.","x":""},{"id":"feminino-03_3","n":"La Bomba","b":"Carolina Herrera","c":"fem","s":null,"t":"Pitaya exótica.","m":"Peônia cereja e plumeria vermelha.","f":"Baunilha solar.","x":""},{"id":"feminino-03_4","n":"Euphoria","b":"Calvin Klein","c":"fem","s":null,"t":"Romã, maracujá, pêssego e acorde verde.","m":"Orquídea, flor de lótus e violeta.","f":"Patchouli, almíscar, baunilha e âmbar.","x":""},{"id":"feminino-03_5","n":"Coco Mademoiselle","b":"Chanel","c":"fem","s":null,"t":"Laranja, mandarina, bergamota e flor de laranjeira.","m":"Rosa turca, jasmim, mimosa e ylang ylang.","f":"Patchouli, almíscar branco, baunilha, vetiver, fava tonka e opoponax.","x":""},{"id":"feminino-04_0","n":"Chance","b":"Chanel","c":"fem","s":null,"t":"Patchouli, pimenta rosa, abacaxi, jacinto e íris.","m":"Limão, jasmim e rosa.","f":"Patchouli, almíscar, vetiver e baunilha.","x":""},{"id":"feminino-04_1","n":"Chanel Nº5","b":"Chanel","c":"fem","s":null,"t":"Aldeídos, ylang ylang, néroli, bergamota e limão.","m":"Íris, jasmim, rosa, raiz de orris e lírio-do-vale.","f":"Civeta, almíscar, sândalo, âmbar, musgo, baunilha, vetiver e patchouli.","x":""},{"id":"feminino-04_2","n":"Gabrielle","b":"Chanel","c":"fem","s":null,"t":"Toranja, mandarina e groselha preta.","m":"Flor de laranjeira, jasmim, ylang ylang, tuberosa, lírio-do-vale, pera e pimenta rosa.","f":"Almíscar, sândalo, cashmeran e raiz de orris.","x":""},{"id":"feminino-04_3","n":"Chloé","b":"Chloé","c":"fem","s":null,"t":"Peônia, frésia e lichia.","m":"Rosa, lírio-do-vale e magnólia.","f":"Âmbar e cedro da Virgínia.","x":""},{"id":"feminino-04_4","n":"Hypnotic Poison","b":"Dior","c":"fem","s":null,"t":"Damasco, ameixa e coco.","m":"Jasmim, tuberosa, lírio e rosa.","f":"Sândalo, baunilha, almíscar e amêndoa.","x":""},{"id":"feminino-04_5","n":"J'adore","b":"Dior","c":"fem","s":null,"t":"Magnólia, melão, pera, tangerina e bergamota.","m":"Rosa, orquídea, ameixa, jasmim e amônia.","f":"Almíscar, baunilha e cedro.","x":""},{"id":"feminino-05_0","n":"Miss Dior","b":"Dior","c":"fem","s":null,"t":"Tangerina e laranja.","m":"Jasmim e rosa.","f":"Patchouli e almíscar.","x":""},{"id":"feminino-05_1","n":"Light Blue","b":"Dolce&Gabbana","c":"fem","s":null,"t":"Maçã, jasmim e limão.","m":"Rosa branca e bambu.","f":"Almíscar, cedro e âmbar.","x":""},{"id":"feminino-05_2","n":"Acqua di Gioia","b":"Giorgio Armani","c":"fem","s":null,"t":"Bergamota, limão, menta e mandarina.","m":"Violeta, jasmim, pimenta e peônia.","f":"Açúcar mascavo, cedro e ládano.","x":""},{"id":"feminino-05_3","n":"My Way","b":"Giorgio Armani","c":"fem","s":null,"t":"Bergamota.","m":"Flor de laranjeira, tuberosa, jasmim absoluto da Índia e uva.","f":"Baunilha, cedro e almíscar.","x":""},{"id":"feminino-05_4","n":"Sì","b":"Giorgio Armani","c":"fem","s":null,"t":"Cassis, groselha e bergamota.","m":"Rosa e frésia.","f":"Baunilha, patchouli e ambrox.","x":""},{"id":"feminino-05_5","n":"Ange ou Démon","b":"Givenchy","c":"fem","s":null,"t":"Tangerina.","m":"Ylang ylang e cominho.","f":"Baunilha, fava tonka e musgo de carvalho.","x":""},{"id":"feminino-06_0","n":"L'Interdit","b":"Givenchy","c":"fem","s":null,"t":"Bergamota.","m":"Pera, jasmim, rosa, flor de laranjeira, ylang ylang e muguet.","f":"Patchouli, âmbar, vetiver e baunilha.","x":""},{"id":"feminino-06_1","n":"Gaultier Divine","b":"Jean Paul Gaultier","c":"fem","s":null,"t":"Calypsone, frutas vermelhas e bergamota.","m":"Lírio, jasmim e ylang ylang.","f":"Merengue, almíscar e patchouli.","x":""},{"id":"feminino-06_2","n":"Scandal","b":"Jean Paul Gaultier","c":"fem","s":null,"t":"Laranja e tangerina.","m":"Mel, gardênia, jasmim e pêssego.","f":"Caramelo, alcaçuz e patchouli.","x":""},{"id":"feminino-06_3","n":"English Pear & Freesia","b":"Jo Malone","c":"fem","s":null,"t":"Melão e pera.","m":"Frésia e rosa.","f":"Almíscar, baunilha, âmbar e patchouli.","x":""},{"id":"feminino-06_4","n":"Flower by Kenzo","b":"Kenzo","c":"fem","s":null,"t":"Limão siciliano, gengibre, mandarina e lichia.","m":"Camomila, mimosa, rosa damascena e água de rosas.","f":"Almíscar branco, baunilha de Madagascar, âmbar e patchouli.","x":""},{"id":"feminino-06_5","n":"Hypnôse","b":"Lancôme","c":"fem","s":null,"t":"Flor de maracujá.","m":"Jasmim, gardênia e baunilha.","f":"Vetiver e almíscar.","x":""},{"id":"feminino-07_0","n":"Idôle","b":"Lancôme","c":"fem","s":null,"t":"Bergamota e pera.","m":"Rosa de Esparta, rosa centifólia e jasmim indiano.","f":"Almíscar branco e baunilha.","x":""},{"id":"feminino-07_1","n":"La Nuit Trésor","b":"Lancôme","c":"fem","s":null,"t":"Cítricos, laranja e bergamota.","m":"Pera, bergamota, tangerina e lichia.","f":"Rosa, baunilha, praliné e maracujá.","x":""},{"id":"feminino-07_2","n":"La Vie Est Belle","b":"Lancôme","c":"fem","s":null,"t":"Pera, groselha e flor de laranjeira.","m":"Íris e jasmim.","f":"Patchouli, fava tonka, baunilha e caramelo.","x":""},{"id":"feminino-07_3","n":"Les Sables Roses","b":"Louis Vuitton","c":"fem","s":null,"t":"Laranja.","m":"Rosa da Bulgária, rosa de maio e pimenta.","f":"Oud e âmbar.","x":""},{"id":"feminino-07_4","n":"Nina","b":"Nina Ricci","c":"fem","s":null,"t":"Limão taiti e limão siciliano.","m":"Maçã e peônia.","f":"Almíscar e cedro.","x":""},{"id":"feminino-07_5","n":"Prada Candy","b":"Prada","c":"fem","s":null,"t":"Caramelo.","m":"Benjoim e almíscar.","f":"Baunilha e patchouli.","x":""},{"id":"feminino-08_0","n":"Paradoxe","b":"Prada","c":"fem","s":null,"t":"Pera, tangerina e bergamota.","m":"Flor de laranjeira, néroli e jasmim.","f":"Baunilha, âmbar, benjoim siam e almíscar.","x":""},{"id":"feminino-08_1","n":"Fame","b":"Paco Rabanne","c":"fem","s":null,"t":"Bergamota e manga.","m":"Jasmim e olíbano.","f":"Baunilha e sândalo.","x":""},{"id":"feminino-08_2","n":"Lady Million","b":"Paco Rabanne","c":"fem","s":null,"t":"Framboesa, laranja e limão.","m":"Néroli, gardênia, jasmim e peônia.","f":"Âmbar, baunilha, mel e patchouli.","x":""},{"id":"feminino-08_3","n":"Olympéa","b":"Paco Rabanne","c":"fem","s":null,"t":"Tangerina, mandarina e gengibre.","m":"Jasmim e sal.","f":"Baunilha, sândalo, almíscar e âmbar.","x":""},{"id":"feminino-08_4","n":"Alien","b":"Thierry Mugler","c":"fem","s":null,"t":"Jasmim e cardamomo.","m":"Flor de laranjeira, cominho e cashmere.","f":"Âmbar, baunilha e heliotrópio.","x":""},{"id":"feminino-08_5","n":"Angel","b":"Thierry Mugler","c":"fem","s":null,"t":"Bergamota, melão, cassis, groselha e tangerina.","m":"Frutas vermelhas, damasco, pêssego e mel.","f":"Patchouli, âmbar, chocolate e caramelo.","x":""},{"id":"feminino-09_0","n":"Black Opium","b":"YSL","c":"fem","s":null,"t":"Pera e laranja.","m":"Café, amêndoa, jasmim, flor de laranjeira e algodão-doce.","f":"Baunilha, patchouli e cashmere.","x":""},{"id":"feminino-09_1","n":"Libre","b":"YSL","c":"fem","s":null,"t":"Óleo de tangerina, lavanda, groselha e petitgrain.","m":"Flor de laranjeira, jasmim e lavanda.","f":"Baunilha, cedro, âmbar cinzento e almíscar.","x":""},{"id":"feminino-09_2","n":"Donna","b":"Valentino","c":"fem","s":null,"t":"Bergamota e toranja.","m":"Íris, rosa e açúcar queimado.","f":"Couro, baunilha e patchouli.","x":""},{"id":"feminino-09_3","n":"Bright Crystal","b":"Versace","c":"fem","s":null,"t":"Romã e tangerina.","m":"Peônia, magnólia e flor de lótus.","f":"Almíscar e âmbar.","x":""},{"id":"feminino-10_0","n":"Sabah Al Ward","b":"Al Wataniah","c":"fem","s":null,"t":"Bergamota e tangerina.","m":"Chocolate, pimenta, jasmim e flor de laranjeira.","f":"Baunilha, fava tonka e patchouli.","x":"Árabe"},{"id":"feminino-10_1","n":"Yara","b":"Lattafa","c":"fem","s":null,"t":"Orquídea, heliotropina e tangerina.","m":"Amanteigado, chocolate e abacaxi.","f":"Baunilha, almíscar e sândalo.","x":"Árabe"},{"id":"home-2_0","n":"Bamboo","b":"Home Spray","c":"home","d":"Bambu verde. Leve e confortável."},{"id":"home-2_1","n":"Bubbaloo Uva","b":"Home Spray","c":"home","d":"Chiclete de uva."},{"id":"home-2_2","n":"Chá Branco","b":"Home Spray","c":"home","d":"Inspirado em Tânia Bulhões. Floral aromático, com leve toque adocicado e fava tonka."},{"id":"home-2_3","n":"Cidade Jardim","b":"Home Spray","c":"home","d":"Jardim Blend: mistura do cheiro dos shoppings Cidade Jardim e Morumbi. Verbena, capim-limão, almíscar, bergamota e lírio."},{"id":"home-2_4","n":"Daslu","b":"Home Spray","c":"home","d":"Notas orientais (baunilha) e amadeiradas (patchouli, cedro e sândalo)."},{"id":"home-2_5","n":"Jo Malone","b":"Home Spray","c":"home","d":"Inspirado em English Pear & Freesia."},{"id":"home-3_0","n":"Lavanda","b":"Home Spray","c":"home","d":"Lavanda francesa, toque herbal fresco, com fundo levemente amadeirado."},{"id":"home-3_1","n":"Le Lis Blanc","b":"Home Spray","c":"home","d":"Alecrim, cânfora e eucalipto."},{"id":"home-3_2","n":"Tutti Frutti","b":"Home Spray","c":"home","d":"Tutti frutti, morango, laranja, menta e bergamota."},{"id":"home-3_3","n":"Trousseau","b":"Home Spray","c":"home","d":"Cítrico floral amadeirado: limão, artemísia, alecrim, canela e flor de cravo."},{"id":"home-3_4","n":"Shopping Iguatemi","b":"Home Spray","c":"home","d":"Frutal floral: cassis, mandarina, lírio, gerânio, sândalo, vetiver e almíscar."}];
-const WA = "5598999073710";
-const CAT = {nicho:"Nicho", masc:"Masculino", fem:"Feminino", home:"Home Spray"};
-const $ = s => document.querySelector(s);
-const grade = $("#grade");
-let estado = {cat:"todos", sub:"", q:""};
-let selecao = [];
-try { selecao = JSON.parse(localStorage.getItem("macion-selecao") || "[]").filter(id => DADOS.some(d => d.id === id)); } catch(e) {}
-function salvar(){ try { localStorage.setItem("macion-selecao", JSON.stringify(selecao)); } catch(e) {} }
-
-const norm = s => (s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
-const isArabe = d => d.x === "Árabe";
-function rotulo(d){
-  if (d.c === "nicho") return "Nicho · " + d.s;
-  return CAT[d.c];
-}
-function filtrar(){
-  const q = norm(estado.q);
-  return DADOS.filter(d => {
-    if (estado.cat === "arabe" && !isArabe(d)) return false;
-    if (!["todos","arabe"].includes(estado.cat) && d.c !== estado.cat) return false;
-    if (estado.cat === "nicho" && estado.sub && d.s !== estado.sub) return false;
-    if (q && !norm([d.n,d.b,d.t,d.m,d.f,d.d].join(" ")).includes(q)) return false;
-    return true;
-  });
-}
-const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-10"/></svg>';
-function render(){
-  const lista = filtrar();
-  $("#contagem").textContent = lista.length + (lista.length === 1 ? " fragrância" : " fragrâncias");
-  if (!lista.length){
-    grade.innerHTML = '<div class="vazio" style="grid-column:1/-1"><b>Nenhuma fragrância encontrada</b>Tente outro nome, marca ou nota, como "baunilha" ou "Dior".</div>';
-    return;
-  }
-  grade.innerHTML = lista.map(d => `
-    <button class="item" data-id="${d.id}" type="button" aria-label="${d.n}, inspirado em ${d.b}. Ver notas">
-      <div class="foto">
-        ${d.x ? `<span class="selo">${d.x}</span>` : ""}
-        ${selecao.includes(d.id) ? `<span class="marcado" title="Na sua seleção">${CHECK}</span>` : ""}
-        <img loading="lazy" src="img/${d.id}.webp" alt="">
-      </div>
-      <span class="nome">${d.n}</span>
-      <span class="ref">${d.c === "home" ? "Home Spray · 200 ml" : "Insp. " + d.b}</span>
-      <span class="tag">${rotulo(d)}${d.c === "home" ? "" : " · 55 ml"}</span>
-    </button>`).join("");
-}
-function contar(){
-  document.querySelectorAll(".chip").forEach(c => {
-    const cat = c.dataset.cat;
-    const n = cat === "todos" ? DADOS.length : cat === "arabe" ? DADOS.filter(isArabe).length : DADOS.filter(d => d.c === cat).length;
-    c.querySelector("sup").textContent = n;
-  });
-}
-function atualizarSelecao(){
-  $("#selecao").hidden = selecao.length === 0;
-  $("#qtd").textContent = selecao.length;
-  const itens = selecao.map(id => DADOS.find(d => d.id === id)).filter(Boolean);
-  const linhas = itens.map(d => d.c === "home" ? `• Home Spray ${d.n} (200 ml)` : `• ${d.n} – inspirado em ${d.b} (55 ml)`);
-  const msg = "Olá, Macion! Gostaria de pedir:\n" + linhas.join("\n");
-  $("#enviar").href = `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
-}
-document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
-  estado.cat = c.dataset.cat; estado.sub = "";
-  document.querySelectorAll(".chip").forEach(o => o.setAttribute("aria-pressed", o === c));
-  $("#subNicho").hidden = estado.cat !== "nicho";
-  document.querySelectorAll("#subNicho button").forEach(b => b.setAttribute("aria-pressed", b.dataset.sub === ""));
-  render();
-}));
-document.querySelectorAll("#subNicho button").forEach(b => b.addEventListener("click", () => {
-  estado.sub = b.dataset.sub;
-  document.querySelectorAll("#subNicho button").forEach(o => o.setAttribute("aria-pressed", o === b));
-  render();
-}));
-$("#busca").addEventListener("input", e => { estado.q = e.target.value; render(); });
-
-// ficha
-const ficha = $("#ficha"); let atual = null;
-function abrir(id){
-  const d = DADOS.find(x => x.id === id); if (!d) return; atual = d;
-  $("#fImg").src = `img/${d.id}.webp`; $("#fImg").alt = d.n;
-  $("#fCat").textContent = rotulo(d) + (d.x ? " · " + d.x : "");
-  $("#fNome").textContent = d.n;
-  $("#fInsp").innerHTML = d.c === "home" ? "Perfume para ambientes" : `Inspirado em <b>${d.n}</b>, de ${d.b}`;
-  $("#fNotas").innerHTML = d.c === "home"
-    ? `<div><dt>Aroma</dt><dd>${d.d}</dd></div>`
-    : `<div><dt>Saída</dt><dd>${d.t}</dd></div><div><dt>Corpo</dt><dd>${d.m}</dd></div><div><dt>Fundo</dt><dd>${d.f}</dd></div>`;
-  $("#fVol").textContent = d.c === "home" ? "200 ml" : "55 ml";
-  $("#fVolTx").textContent = d.c === "home" ? "frasco spray" : "frasco";
-  const msg = d.c === "home" ? `Olá, Macion! Quero o Home Spray ${d.n} (200 ml).` : `Olá, Macion! Quero o perfume ${d.n}, inspirado em ${d.b} (55 ml).`;
-  $("#fWa").href = `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
-  botaoAdd();
-  ficha.showModal();
-}
-function botaoAdd(){ $("#fAdd").textContent = selecao.includes(atual.id) ? "Remover da seleção" : "Adicionar à seleção"; }
-$("#fAdd").addEventListener("click", () => {
-  const i = selecao.indexOf(atual.id);
-  i >= 0 ? selecao.splice(i,1) : selecao.push(atual.id);
-  salvar(); botaoAdd(); atualizarSelecao(); render();
-});
-grade.addEventListener("click", e => { const b = e.target.closest(".item"); if (b) abrir(b.dataset.id); });
-$("#fechar").addEventListener("click", () => ficha.close());
-ficha.addEventListener("click", e => { if (e.target === ficha) ficha.close(); });
-$("#limpar").addEventListener("click", () => { selecao = []; salvar(); atualizarSelecao(); render(); });
-
-$("#copiar").addEventListener("click", async () => {
-  const b = $("#copiar");
-  try { await navigator.clipboard.writeText("98999073710"); b.textContent = "Copiado"; }
-  catch(e){ const r = document.createRange(); r.selectNodeContents($("#numero")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selecionado"; }
-  setTimeout(() => b.textContent = "Copiar", 1800);
-});
-
-contar(); render(); atualizarSelecao();
-</script>
-
+<script>window.PAGINA = {"tipo": "inicio", "ids": ["nicho-4_2", "nicho-3_0", "nicho-2_1", "masculino-4_3", "masculino-4_0", "feminino-07_2", "feminino-03_2", "feminino-09_0"]};</script>
+<script src="/assets/dados.js"></script>
+<script src="/assets/site.js"></script>
 </body>
 </html>
